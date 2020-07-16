@@ -5,6 +5,8 @@ body {
     background-size: 100% 100%;
     margin: 60px auto;
     width: 100%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -31,6 +33,7 @@ p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #ffa07a;
+
 }
 footer {
     border-top: 1px solid #d5d5d5;
