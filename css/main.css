@@ -2,6 +2,7 @@ body {
     background-image: url("/static/img/test.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: auto;
     margin: 60px auto;
     width: 100%;
 }
