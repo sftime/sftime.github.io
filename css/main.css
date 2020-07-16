@@ -5,14 +5,15 @@ body {
     background-size: 100% 100%;
     margin: 60px auto;
     width: 100%;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: #ffffff;
 }
 nav ul li, footer ul li {
     display: inline;
