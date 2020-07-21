@@ -67,3 +67,8 @@ ul.posts li {
   font-size: 12pt;
   color: white;
 }
+
+.vis-item.vis-selected.test {
+  background-color: #E0E0E0;
+  color: black;
+}
