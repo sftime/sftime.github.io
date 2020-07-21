@@ -62,7 +62,7 @@ ul.posts li {
 }
 
 .vis-time-axis .vis-text {
-  color: yellow;
+  color: red;
 }
 .vis-time-axis .vis-grid.vis-odd {
   background: black;
