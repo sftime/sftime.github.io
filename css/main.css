@@ -62,17 +62,13 @@ ul.posts li {
   color: white;
 }
 
-.vis-time-axis {
-  background-color: gray;
-  opacity: 0.4;
-  color: white;
-}
-
 .vis-time-axis .vis-grid.vis-odd {
+  background: white;
   opacity: 0.4;
 }
 
 .vis-time-axis .vis-grid.vis-even {
+  background: white;
   opacity: 0.4;
 }
 
