@@ -57,7 +57,7 @@ ul.posts li {
 .vis-timeline {
   border: 2px solid white;
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-  font-size: 3em;
+  font-size: 10pt;
   background-color: black;
   opacity 0.3;
 }
