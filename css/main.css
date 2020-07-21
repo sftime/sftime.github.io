@@ -1,8 +1,5 @@
 body {
-  background-image: url("/static/img/test3.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  color: #1f2933;
 }
 
 nav ul, footer ul {
@@ -10,7 +7,7 @@ nav ul, footer ul {
   padding: 0px;
   list-style: none;
   font-weight: bold;
-  color: #ffffff;
+  color: #f5f7fa;
 }
 
 nav ul li, footer ul li {
