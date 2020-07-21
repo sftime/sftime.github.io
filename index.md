@@ -2,6 +2,6 @@
 layout: default
 ---
 
-<div id="container"></div>
+<div id="visualization"></div>
 
 test
