@@ -102,7 +102,13 @@
 		]);
 
 		// Configuration for the Timeline
-		const options = {};
+		var options = {
+			width: '100%',
+			height: '30px',
+			margin: {
+				item: 20
+			}
+		};
 
 		// Create a Timeline
 		const timeline = new vis.Timeline(container, items, options);
