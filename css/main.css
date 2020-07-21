@@ -65,6 +65,7 @@ ul.posts li {
 .vis-time-axis {
   background-color: gray;
   opacity: 0.4;
+  color: white;
 }
 
 .vis-time-axis .vis-grid.vis-odd {
