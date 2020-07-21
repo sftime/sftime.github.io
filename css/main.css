@@ -66,6 +66,14 @@ ul.posts li {
   opacity: 0.4;
 }
 
+.vis-time-axis .vis-grid.vis-odd {
+  opacity: 0.4;
+}
+
+.vis-time-axis .vis-grid.vis-even {
+  opacity: 0.4;
+}
+
 .vis-item.test {
   border-color: #757575;
   background-color: #212121;
