@@ -65,12 +65,12 @@ ul.posts li {
 }
 .vis-time-axis .vis-grid.vis-odd {
   background: black;
-
+  opacity: 0.4;
 }
 
 .vis-time-axis .vis-grid.vis-even {
   background: black;
-
+  opacity: 0.4;
 }
 
 .vis-item.test {
