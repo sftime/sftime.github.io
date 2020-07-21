@@ -63,12 +63,12 @@ ul.posts li {
 
 .vis-time-axis .vis-grid.vis-odd {
   background: black;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .vis-time-axis .vis-grid.vis-even {
   background: black;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .vis-item.test {
@@ -81,4 +81,8 @@ ul.posts li {
 .vis-item.vis-selected.test {
   background-color: #E0E0E0;
   color: black;
+}
+
+.vis-time-axis .vis-text {
+  color: white;
 }
