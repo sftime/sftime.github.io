@@ -66,6 +66,11 @@ ul.posts li {
   opacity: 0.4;
 }
 
+.vis-time-axis {
+  background: black;
+  opacity: 0.4;
+}
+
 .vis-time-axis .vis-grid.vis-even {
   background: black;
   opacity: 0.4;
