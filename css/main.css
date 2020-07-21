@@ -1,10 +1,5 @@
 body {
-  background-image: url("/static/img/test3.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  margin: 20px auto;
-  width: 100%;
+  background-color: #1f2933;
 }
 
 nav ul, footer ul {
@@ -64,15 +59,6 @@ ul.posts li {
   font-size: 12pt;
 }
 
-.vis-time-axis .vis-grid.vis-odd {
-  background: black;
-  opacity: 0.4;
-}
-
-.vis-time-axis .vis-grid.vis-even {
-  background: black;
-  opacity: 0.4;
-}
 
 .vis-item.test {
   border-color: #757575;
