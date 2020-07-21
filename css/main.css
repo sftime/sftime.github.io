@@ -57,14 +57,13 @@ ul.posts li {
   border: 2px solid white;
   font-family: sans-serif;
   font-size: 12pt;
-  background: black;
+  background: #212121;
   opacity 0.3;
 }
 
 .vis-item.test {
-  border-color: #f991a3;
-  background-color: pink;
-  font-size: 15pt;
-  color: purple;
-  box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.5);
+  border-color: #757575;
+  background-color: #212121;
+  font-size: 12pt;
+  color: white;
 }
