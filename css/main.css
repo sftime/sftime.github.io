@@ -55,6 +55,10 @@ ul.posts li {
   font-size: 10pt;
 }
 
+.vis-time-axis .vis-text {
+  color: white;
+}
+
 .vis-item.test {
   border-color: #757575;
   background-color: #212121;
