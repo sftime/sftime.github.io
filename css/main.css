@@ -57,7 +57,7 @@ ul.posts li {
   font-size: 12pt;
   background: #212121;
   color: white;
-  opacity 0.1;
+  opacity: 0.4;
 }
 
 .vis-item.test {
