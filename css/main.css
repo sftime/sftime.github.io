@@ -60,6 +60,9 @@ ul.posts li {
   font-size: 12pt;
   background: #212121;
   color: white;
+}
+
+.vis-grid {
   opacity: 0.4;
 }
 
