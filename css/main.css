@@ -55,10 +55,11 @@ ul.posts li {
 }
 
 .vis-timeline {
-  border: 2px solid purple;
-  font-family: purisa, 'comic sans', cursive;
-  font-size: 12pt;
-  background: #ffecea;
+  border: 2px solid white;
+  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: 3em;
+  background-color: black;
+  opacity 0.3;
 }
 
 .vis-item {
