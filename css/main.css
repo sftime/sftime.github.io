@@ -58,7 +58,7 @@ ul.posts li {
   border: 2px solid white;
   font-family: sans-serif;
   font-size: 10pt;
-  background-color: black;
+  background-color: #121212;
   opacity 0.4;
 }
 
@@ -66,4 +66,9 @@ ul.posts li {
   border-color: white;
   background-color: gray;
   color: white;
+}
+
+.vis-item.vis-selected {
+  border-color: green;
+  background-color: lightgreen;
 }
