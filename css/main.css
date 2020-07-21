@@ -58,13 +58,12 @@ ul.posts li {
   border: 2px solid white;
   font-family: sans-serif;
   font-size: 10pt;
-  background-color: gray;
+  background-color: black;
   opacity 0.4;
 }
 
 .vis-item {
   border-color: white;
-  background-color: black;
-  opacity 0.3;
+  background-color: gray;
   color: white;
 }
