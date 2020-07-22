@@ -21,6 +21,9 @@ nav ul li, footer ul li {
 .dropdown-menu {
   background-color: black;
   opacity: 0.7;
+}
+
+.dropdown-item {
   color: white;
 }
 
