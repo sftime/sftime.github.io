@@ -58,20 +58,16 @@ ul.posts li {
   font-size: 12pt;
 }
 
-.vis-time-axis {
-  background: black;
-  opacity 0.5;
-  color: white;
-}
-
 .vis-time-axis .vis-grid.vis-odd {
   background: black;
   opacity: 0.5;
+  color: white;
 }
 
 .vis-time-axis .vis-grid.vis-even {
   background: black;
   opacity: 0.5;
+  color: white;
 }
 
 .vis-item.test {
