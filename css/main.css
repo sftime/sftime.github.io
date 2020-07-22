@@ -33,8 +33,10 @@ h1 {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 }
 
-h3 {
+h3.jum {
   color: white;
+  display: inline;
+  padding-left: 15px;
 }
 
 p {
