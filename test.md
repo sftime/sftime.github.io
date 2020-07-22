@@ -3,6 +3,7 @@ layout: default
 ---
 
 <div class="jumbotron">
-  <h2 class="display-4">sfti.me</h2>
-  <p class="lead">An interactive timeline of science fiction.</p>
+  <h1 class="display-4">sfti.me</h1>
+  <h2>An interactive timeline of science fiction.
+  <p class="lead">To control the timeline, click and drag to scroll horizontally. Zoom in with the mousewheel or pinch on mobile.</p>
 </div>
