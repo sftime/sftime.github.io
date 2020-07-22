@@ -38,8 +38,9 @@ p {
   color: white;
 }
 
-footer {
-  font-size: .8em;
+footer a{
+       float: right;
+       margin-right: 30px;
 }
 
 div.jumbotron {
