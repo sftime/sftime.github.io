@@ -15,32 +15,14 @@
 
 <body>
 	<nav class="navbar navbar-expand-md sticky-top">
-		<!--	<a class="navbar-brand" href="#">Navbar</a> -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
 					<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 				</li>
-				<!--<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Test
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a href="#" class="dropdown-item">third test</a>
-						<a href="#" class="dropdown-item">test two</a>
-						<a href="#" class="dropdown-item">test</a>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
-				</li>-->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Recent Additions <span class="caret"></span></a>
@@ -53,22 +35,14 @@
 				<li><a href="/contribute"><span class="glyphicon glyphicon-user"></span> Contribute!</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> About</a></li>
 			</ul>
-			<!--   <form class="form-inline my-2 my-lg-0">
-				      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				    </form> -->
 		</div>
 	</nav>
 	<div class="container p-3 my-3">
 
 		{{ content }}
 
-	</div><!-- /.container -->
+	</div>
 	<script type="text/javascript">
-		// DOM element where the Timeline will be attached
-		//const container = document.getElementById("visualization");
-
-		// Create a DataSet (allows two way data-binding)
 		const items = new vis.DataSet([{
 				id: 1,
 				content: "<i>Total Recall</i>",
@@ -84,26 +58,6 @@
 				title: "<b>test</b>"
 			}
 		]);
-
-		// Configuration for the Timeline
-//		var options = {
-	//		width: '100%',
-		//	height: '500px',
-			//showMajorLabels: false,
-	//		zoomMin: 1000 * 60 * 60 * 24 * 31 * 12 * 6,
-	//	};
-
-		// Create a Timeline
-		//const timeline = new vis.Timeline(container, items, options);
-
-		// Timeline object
-		//var timelineTooltips = new vis.Timeline(
-	//		document.getElementById("tooltips"),
-	//		items,
-		//	options
-		//);
-
-		// Follow options
 		var follow_options = {
 			width: '100%',
 			height: '500px',
@@ -113,7 +67,6 @@
 				followMouse: true,
 			},
 		};
-
 		var timelineFollow = new vis.Timeline(
 			document.getElementById("visualization"),
 			items,
@@ -121,7 +74,7 @@
 		);
 	</script>
 	<footer>
-		<a href="#">e-mail us</a>
+		<a href="#" <i class="fa fa-envelope fa-1" aria-hidden="true"></i></a>
 		<a href=""><i class="fa fa-github fa-1" aria-hidden="true"></i></a>
 	</footer>
 </body>

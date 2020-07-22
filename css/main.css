@@ -18,6 +18,11 @@ nav ul li, footer ul li {
   margin-right: 10px;
 }
 
+ul.dropdownmenu {
+  background: black;
+  opacity: 0.5;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
