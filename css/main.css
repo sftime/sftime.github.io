@@ -25,6 +25,7 @@ nav ul li, footer ul li {
 
 .dropdown-item {
   color: white;
+  z-index: 99999;
 }
 
 a {
