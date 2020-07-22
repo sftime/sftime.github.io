@@ -73,13 +73,15 @@
 				id: 1,
 				content: "<i>Total Recall</i>",
 				start: "2084",
-				className: "test"
+				className: "test",
+				title: "<i>test</i>"
 			},
 			{
 				id: 2,
 				content: "<i>The Terminator</i> singularity",
 				start: "2045",
-				className: "test"
+				className: "test",
+				title: "<b>test</b>"
 			}
 		]);
 
@@ -93,11 +95,31 @@
 
 		// Create a Timeline
 		const timeline = new vis.Timeline(container, items, options);
+
+		// Timeline object
+		var timelineTooltips = new vis.Timeline(
+			document.getElementById("tooltips"),
+			items,
+			options
+		);
+
+		// Follow options
+		var follow_options = {
+			tooltip: {
+				followMouse: true,
+			},
+		};
+
+		var timelineFollow = new vis.Timeline(
+			document.getElementById("tooltips-follow"),
+			items,
+			follow_options
+		);
 	</script>
 	<footer>
-     <a href="#">e-mail us</a>
-		 <a href=""><i class="fa fa-github fa-1" aria-hidden="true"></i></a>
-</footer>
+		<a href="#">e-mail us</a>
+		<a href=""><i class="fa fa-github fa-1" aria-hidden="true"></i></a>
+	</footer>
 </body>
 
 </html>

@@ -9,4 +9,4 @@ title: time, in science fiction
   <p class="lead"><small>To control the timeline, click and drag to scroll horizontally. Zoom in and out with the mousewheel or pinch on mobile.</small></p>
 </div>
 
-<div id="visualization"></div>
+<div id="tooltips-follow"></div>
