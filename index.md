@@ -10,5 +10,3 @@ title: time, in science fiction
 </div>
 
 <div id="visualization"></div>
-
-test 36
