@@ -74,6 +74,10 @@ ul.posts li {
   color: white;
 }
 
+.vis-time-axis .vix-minor {
+  color: #ffffff;
+}
+
 .vis-item.test {
   border-color: #757575;
   background-color: #212121;
