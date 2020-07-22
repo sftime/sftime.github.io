@@ -48,8 +48,7 @@ footer a {
 div.jumbotron {
   background-color: black;
   background: rgba(0, 0, 0, 0.7);
-  padding: 200px 0 140px 0;
-  margin-bottom: 70px;
+  padding: 10px 10px 10px 10px;
 }
 
 h2.display-4 {
