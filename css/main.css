@@ -17,6 +17,7 @@ nav ul li, footer ul li {
   display: inline;
   margin-right: 10px;
   z-index: 99999;
+  color: white;
 }
 
 .dropdown-menu {
