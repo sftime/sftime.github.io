@@ -44,7 +44,8 @@ footer {
 }
 
 div.jumbotron {
-  opacity: 0.5;
+  background-color: black;
+  opacity: 0.3;
 }
 
 ul.posts {
