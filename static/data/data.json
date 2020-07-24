@@ -1,39 +1,15 @@
 [{
     "id": 1,
-    "content": "item 1",
-    "start": "2014-04-20",
-    "className": "test"
+    "content": "<i>Total Recall</i>",
+    "start": "2084",
+    "className": "test",
+    "title": "<i>test</i>"
   },
   {
     "id": 2,
-    "content": "item 2",
-    "start": "2014-04-14",
-    "className": "test"
-  },
-  {
-    "id": 3,
-    "content": "item 3",
-    "start": "2014-04-18",
-    "className": "test"
-  },
-  {
-    "id": 4,
-    "content": "item 4",
-    "start": "2014-04-16",
-    "end": "2014-04-19",
-    "className": "test"
-  },
-  {
-    "id": 5,
-    "content": "item 5",
-    "start": "2014-04-25",
-    "className": "test"
-  },
-  {
-    "id": 6,
-    "content": "item 6",
-    "start": "2014-04-27",
-    "type": "point",
-    "className": "test"
+    "content": "<i>The Terminator</i> singularity",
+    "start": "2045",
+    "className": "test",
+    "title": "<b>test</b>"
   }
 ]
