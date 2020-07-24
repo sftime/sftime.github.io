@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: test
 ---
 
 <div id="external_visualization"></div>
