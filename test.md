@@ -2,7 +2,7 @@
 layout: test
 ---
 
-<div id="external_visualization"></div>
+<div id="exvisualization"></div>
 <div id="loading">loading...</div>
 
-TEST 2
+TEST 3

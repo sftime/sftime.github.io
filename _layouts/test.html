@@ -46,13 +46,13 @@
   <script type="text/javascript">
     // load data via an ajax request. When the data is in, load the timeline
     $.ajax({
-      url: '/static/data/data.json',
+      url: '../static/data/data.json',
       success: function(data) {
         // hide the "loading..." message
         document.getElementById('loading').style.display = 'none';
 
         // DOM element where the Timeline will be attached
-        var container = document.getElementById('external_visualization');
+        var container = document.getElementById('exvisualization');
 
         // Create a DataSet (allows two way data-binding)
         var items = new vis.DataSet(data);
