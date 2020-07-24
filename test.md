@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div id="visualization"></div>
+<div id="external_visualization"></div>
 <div id="loading">loading...</div>
 
 <script type="text/javascript">
@@ -14,7 +14,7 @@ layout: default
       document.getElementById('loading').style.display = 'none';
 
       // DOM element where the Timeline will be attached
-      var container = document.getElementById('visualization');
+      var container = document.getElementById('external_visualization');
 
       // Create a DataSet (allows two way data-binding)
       var items = new vis.DataSet(data);
