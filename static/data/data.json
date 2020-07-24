@@ -1,4 +1,4 @@
-{
+[{
     id: 1,
     content: "<i>Total Recall</i>",
     start: "2084",
@@ -12,3 +12,4 @@
     className: "test",
     title: "<b>test</b>"
   }
+]
