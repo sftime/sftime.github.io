@@ -111,3 +111,7 @@ ul.posts li {
   background-color: #E0E0E0;
   color: black;
 }
+
+.vis-current-time {
+  opacity: 0.3;
+}
