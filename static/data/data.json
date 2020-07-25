@@ -21,10 +21,10 @@
   },
   {
     "id": 4,
-    "content": "The second part of Aldous Huxley's <i>Ape and Essence</i>",
+    "content": "<i>Ape and Essence</i> by Aldous Huxley",
     "start": "2108",
     "className": "test",
-    "title": "<b>test</b>"
+    "title": "The second part of the novel takes place in the 22nd century."
   },
   {
     "id": 5,
