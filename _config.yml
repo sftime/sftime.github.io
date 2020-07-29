@@ -3,4 +3,4 @@ plugins:
   - jekyll-feed
 name: explainer
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+permalink: /content/:year/:month/:day/:title
