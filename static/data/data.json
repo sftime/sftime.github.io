@@ -3,7 +3,8 @@
     "content": "<i>Total Recall</i>",
     "start": "2084-01-01",
     "className": "test",
-    "title": "<i>test</i>"
+    "title": "<i>test</i>",
+    "zoomLevel": "3"
   },
   {
     "id": 2,
