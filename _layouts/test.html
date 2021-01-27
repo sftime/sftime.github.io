@@ -43,6 +43,7 @@
     {{ content }}
 
   </div>
+  <p id="demo"></p>
   <script type="text/javascript">
     // load data via an ajax request. When the data is in, load the timeline
     $.ajax({
@@ -81,8 +82,10 @@
       }
       // window.alert(items.zoomLevel)
     });
-    document.write(items.zoomLevel);
-    document.write("testing again");
+    var x;
+    for (x in items) {
+      document.getElementById("demo").innerHTML += items[x] + "<br>";
+    }
   </script>
   <footer>
     <a href="#"><i class="fa fa-envelope fa-1" aria-hidden="true"></i></a>
