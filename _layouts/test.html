@@ -77,7 +77,7 @@
         timeline.on('rangechanged', function() {console.log('rangechanged')});
         $(window).on('resize', function(){
             timeline.setOptions({
-                width: (Math.round($(window).width() - 100)) + 'px',
+                width: (Math.round($(window).width() * 0.95)) + 'px',
                 height: (Math.round($(window).height() * 0.90)) + + "px",
             });
           });
