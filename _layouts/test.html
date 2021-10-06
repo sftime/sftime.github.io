@@ -73,6 +73,8 @@
         var timeline = new vis.Timeline(container, items, options);
 
         // listener experiment 
+        timeline.on('rangechange', function() {console.log('rangechange')});
+        timeline.on('rangechange', function() {console.log((timeline.end))});
         timeline.on('rangechanged', function() {console.log('rangechanged')});
       },
       error: function(err) {
