@@ -57,9 +57,10 @@
         // Create a DataSet (allows two way data-binding)
         var items = new vis.DataSet(data);
         var windowHeight = Math.round($(window).height() * 0.90) + 'px';
+        var windowWidth = Math.round($(window).width() * 0.90) + 'px';
         // Configuration for the Timeline
         var options = {
-          width: '100%',
+          width: windowWidth,
           height: windowHeight,
           showMajorLabels: false,
           zoomMin: 1000 * 60 * 60 * 24 * 31 * 12 * 6,
