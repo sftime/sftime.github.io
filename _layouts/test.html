@@ -75,14 +75,8 @@
         // listener experiment 
         timeline.on('rangechange', function() {console.log('rangechange')});
         timeline.on('rangechanged', function() {console.log('rangechanged')});
-        function getTimelineHeight() {
-          return (window.innerHeight - 90);
-        } 
-        $(window).on('resize', function(){
-            timeline.setOptions({
-                width: (window.innerWidth - 100) + "px",
-                height: getTimelineHeight() + "px",
-            });
+
+      
       },
       error: function(err) {
         console.log('Error', err);
@@ -98,6 +92,12 @@
    // for (x in items) {
    //   document.getElementById("demo").innerHTML += items[x] + "<br>";
    // }
+   $(window).on('resize', function(){
+            timeline.setOptions({
+                width: (Math.round($(window).width() * 0.90)) + 'px',
+                height: (Math.round($(window).height() * 0.90)) + + "px",
+            });
+          }
   </script>
 
   </div>
