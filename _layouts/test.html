@@ -76,7 +76,7 @@
         var interval = range.start.valueOf();
 
         // listener experiment 
-        //timeline.on('rangechange', function() {console.log(interval)});
+        timeline.on('rangechange', function() {console.log(interval)});
         timeline.on('rangechanged', function() {console.log(interval)});
         $(window).on('resize', function(){
             timeline.setOptions({                
