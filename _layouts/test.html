@@ -78,8 +78,8 @@
         var date = new Date(interval)
 
         // listener experiment 
-        timeline.on('rangechange', function() {console.log(date)});
-        timeline.on('rangechanged', function() {console.log(date)});
+        timeline.on('rangechange', function() {console.log(timeline.getItemRange())});
+        timeline.on('rangechanged', function() {console.log(timeline.getItemRange()});
         $(window).on('resize', function(){
             timeline.setOptions({                
                 width: (Math.round($(window).width() * 0.99)) + 'px',
