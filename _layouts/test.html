@@ -71,27 +71,16 @@
 
         // Create a Timeline
         var timeline = new vis.Timeline(container, items, options);
-
-        
-
-       
-
-        // listener experiment 
-       // timeline.on('rangechange', function() {
-        //    var range = timeline.getWindow();
-          //  var start_stamp = range.start.valueOf();
-          //  var end_stamp = range.end.valueOf();
-          //  var interval = end_stamp - start_stamp;
-           // console.log(interval)
-          //}
-        //);
+    
+      // listener experiment 
        timeline.on('rangechanged', function() {
             var range = timeline.getWindow();
             var start_stamp = range.start.valueOf();
             var end_stamp = range.end.valueOf();
             var interval = end_stamp - start_stamp;
             var years = interval / 31536000000;
-            console.log(years)
+            console.log(years);
+            console.log(items.get[1]);
           }
         );
         $(window).on('resize', function(){
