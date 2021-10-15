@@ -75,10 +75,10 @@
         // listener experiment 
         timeline.on('rangechange', function() {console.log('rangechange')});
         timeline.on('rangechanged', function() {console.log('rangechanged')});
-        $(window).on('rangechanged', function(){
+        $(window).on('resize', function(){
             timeline.setOptions({
-                width: (Math.round($(window).width() * 0.75)) + 'px',
-                height: (Math.round($(window).height() * 0.95)) + "px",
+                width: (Math.round($(window).width() * 0.99)) + 'px',
+                height: (Math.round($(window).height() * 0.50)) + "px",
             });
           });
       
