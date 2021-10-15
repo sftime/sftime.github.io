@@ -90,7 +90,8 @@
             var start_stamp = range.start.valueOf();
             var end_stamp = range.end.valueOf();
             var interval = end_stamp - start_stamp;
-            console.log(interval)
+            var years = interval / 31536000000;
+            console.log(years)
           }
         );
         $(window).on('resize', function(){
