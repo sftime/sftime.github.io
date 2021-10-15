@@ -82,7 +82,7 @@
             var start_stamp = range.start.valueOf();
             var end_stamp = range.end.valueOf();
             var interval = end_stamp - start_stamp;
-            console.log(date)
+            console.log(interval)
           }
         );
         timeline.on('rangechanged', function() {
@@ -90,8 +90,7 @@
             var start_stamp = range.start.valueOf();
             var end_stamp = range.end.valueOf();
             var interval = end_stamp - start_stamp;
-            var date = new Date(interval);
-            console.log(date)
+            console.log(interval)
           }
         );
         $(window).on('resize', function(){
