@@ -77,7 +77,7 @@
         timeline.on('rangechanged', function() {console.log('rangechanged')});
         $(window).on('resize', function(){
             timeline.setOptions({
-                console.log('resize');
+                
                 width: (Math.round($(window).width() * 0.99)) + 'px',
                 height: (Math.round($(window).height() * 0.50)) + "px",
             });
