@@ -87,7 +87,8 @@
               idrem = item1['id'];
                items.remove(idrem);
             }
-            console.log(outitem);
+            var maxid = items.max('id');
+            console.log(maxid);
           }
         );
         $(window).on('resize', function(){
