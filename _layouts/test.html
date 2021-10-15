@@ -72,12 +72,14 @@
         // Create a Timeline
         var timeline = new vis.Timeline(container, items, options);
 
+        var range = timeline.getWindow();
+        var interval = range.end - range.start;
+
         // listener experiment 
-        timeline.on('rangechange', function() {console.log('rangechange')});
-        timeline.on('rangechanged', function() {console.log('rangechanged')});
+        timeline.on('rangechange', function() {console.log(interval)});
+        timeline.on('rangechanged', function() {console.log(interval)});
         $(window).on('resize', function(){
-            timeline.setOptions({
-                
+            timeline.setOptions({                
                 width: (Math.round($(window).width() * 0.99)) + 'px',
                 height: (Math.round($(window).height() * 0.50)) + "px",
             });
