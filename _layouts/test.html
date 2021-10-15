@@ -73,7 +73,7 @@
         var timeline = new vis.Timeline(container, items, options);
 
         var range = timeline.getWindow();
-        var interval = range.end - range.start;
+        var interval = range.start;
 
         // listener experiment 
         timeline.on('rangechange', function() {console.log(interval)});
