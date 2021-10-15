@@ -77,7 +77,15 @@
        
 
         // listener experiment 
-        timeline.on('rangechange', function() {
+       // timeline.on('rangechange', function() {
+        //    var range = timeline.getWindow();
+          //  var start_stamp = range.start.valueOf();
+          //  var end_stamp = range.end.valueOf();
+          //  var interval = end_stamp - start_stamp;
+           // console.log(interval)
+          //}
+        //);
+       timeline.on('rangechanged', function() {
             var range = timeline.getWindow();
             var start_stamp = range.start.valueOf();
             var end_stamp = range.end.valueOf();
@@ -85,14 +93,6 @@
             console.log(interval)
           }
         );
-       // timeline.on('rangechanged', function() {
-        //    var range = timeline.getWindow();
-          //  var start_stamp = range.start.valueOf();
-           // var end_stamp = range.end.valueOf();
-          //  var interval = end_stamp - start_stamp;
-          //  console.log(interval)
-         // }
-        //);
         $(window).on('resize', function(){
             timeline.setOptions({                
                 width: (Math.round($(window).width() * 0.99)) + 'px',
