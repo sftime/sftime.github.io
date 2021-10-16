@@ -81,14 +81,16 @@
             var years = interval / 31536000000;
             //console.log(years);
             var item1 = items.get(1);
-            //items.remove(item1['id']);
             var outitem = item1['zoomLevel'];
-            if (outitem == 3) { 
-              idrem = item1['id'];
-               items.remove(idrem);
-            }
+            
             var maxid = items.max('id');
             var maxidvalue = maxid['id'];
+            for (let i = 0; i < maxidvalue; i++) {
+              if (outitem == 3) { 
+                idrem = item1['id'];
+                items.remove(idrem);
+              }
+            }
             console.log(maxidvalue);
           }
         );
