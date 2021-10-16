@@ -28,9 +28,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Recent Additions <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item" id="thirdmost"></a></li>
-            <li><a href="#" class="dropdown-item" id="secondmost"></a></li>
-            <li><a href="#" class="dropdown-item" id="firstmost"></a></li>
+            <li><a href="#" class="dropdown-item" id="thirdmost" onclick='moveThird()'></a></li>
+            <li><a href="#" class="dropdown-item" id="secondmost" onclick='moveSecond()'></a></li>
+            <li><a href="#" class="dropdown-item" id="firstmost" onclick='moveFirst()'></a></li>
           </ul>
         </li>
         <li><a href="/contribute"><span class="glyphicon glyphicon-user"></span> Contribute!</a></li>
@@ -94,6 +94,8 @@
         document.getElementById("secondmost").innerHTML = TextAbstract(second_most['content'], 20);
         document.getElementById("firstmost").innerHTML = TextAbstract(most_recent['content'], 20);              
 
+        
+
         for (let i = 1; i < maxidvalue; i++) {
           var item1 = items.get(i);
           var outitem = item1['zoomLevel'];
@@ -107,6 +109,20 @@
 
       var timeline = new vis.Timeline(container, items, options);
     
+      function moveThird() {
+          focusid = third_most['id'];
+          timeline.focus(focusid);
+        }
+
+      function moveSecond() {
+          focusid = second_most['id'];
+          timeline.focus(focusid);
+      }
+
+      function moveFirst() {
+          focusid = first_most['id'];
+          timeline.focus(focusid);
+      }
       // listener experiment 
        timeline.on('rangechanged', function() {
             var range = timeline.getWindow();
