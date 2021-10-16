@@ -77,9 +77,22 @@
         var second_most = items.get((maxidvalue - 1));
         var third_most = items.get((maxidvalue - 2));
 
-        document.getElementById("thirdmost").innerHTML = third_most['content'];
-        document.getElementById("secondmost").innerHTML = second_most['content'];
-        document.getElementById("firstmost").innerHTML = most_recent['content'];              
+        function TextAbstract(text, length) {
+          if (text == null) {
+            return "";
+          }
+          if (text.length <= length) {
+            return text;
+          }
+          text = text.substring(0, length);
+          last = text.lastIndexOf(" ");
+          text = text.substring(0, last);
+          return text + "...";
+        }
+
+        document.getElementById("thirdmost").innerHTML = TextAbstract(third_most['content'], 20);
+        document.getElementById("secondmost").innerHTML = TextAbstract(second_most['content'], 20);
+        document.getElementById("firstmost").innerHTML = TextAbstract(most_recent['content'], 20);              
 
         for (let i = 1; i < maxidvalue; i++) {
           var item1 = items.get(i);
