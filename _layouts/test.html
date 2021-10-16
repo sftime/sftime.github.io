@@ -28,9 +28,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Recent Additions <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item" id="thirdmost" onclick='moveThird()'></a></li>
-            <li><a href="#" class="dropdown-item" id="secondmost" onclick='moveSecond()'></a></li>
-            <li><a href="#" class="dropdown-item" id="firstmost" onclick='moveFirst()'></a></li>
+            <li><a href="#" class="dropdown-item" id="thirdmost" onclick=""></a></li>
+            <li><a href="#" class="dropdown-item" id="secondmost" onclick=""></a></li>
+            <li><a href="#" class="dropdown-item" id="firstmost" onclick=""></a></li>
           </ul>
         </li>
         <li><a href="/contribute"><span class="glyphicon glyphicon-user"></span> Contribute!</a></li>
@@ -109,7 +109,7 @@
 
       var timeline = new vis.Timeline(container, items, options);
     
-      function moveThird() {
+     function moveThird() {
           focusid = third_most['id'];
           timeline.focus(focusid);
         }
@@ -123,6 +123,11 @@
           focusid = first_most['id'];
           timeline.focus(focusid);
       }
+
+      document.getElementById("thirdmost").onclick = "moveThird()";
+      document.getElementById("secondmost").onclick = "moveSecond()";
+      document.getElementById("firstmost").onclick = "moveFirst()";
+      
       // listener experiment 
        timeline.on('rangechanged', function() {
             var range = timeline.getWindow();
