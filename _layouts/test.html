@@ -71,10 +71,11 @@
         
         var maxid = items.max('id');
         var maxidvalue = maxid['id'];
-        var item1 = items.get(1);
-        var outitem = item1['zoomLevel'];
+        
             
-        for (let i = 0; i < maxidvalue; i++) {
+        for (let i = 1; i < maxidvalue; i++) {
+          var item1 = items.get(i);
+          var outitem = item1['zoomLevel'];
           if (outitem == 3) { 
             idrem = item1['id'];
             items.remove(idrem);
