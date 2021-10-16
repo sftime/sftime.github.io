@@ -100,6 +100,9 @@
               if (years < 96 && itemzoom == 2) { 
                 //var idtoadd = item2['id'];
                 items.add(itemToTest);
+              } else if (years > 96 && itemzoom == 2) { 
+                //var idtoadd = item2['id'];
+                items.remove(itemToTest);
               }
             }
           
