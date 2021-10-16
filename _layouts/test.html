@@ -112,16 +112,19 @@
      function moveThird() {
           focusid = third_most['start'];
           timeline.moveTo(focusid);
+          console.log(focusid);
         }
 
       function moveSecond() {
           focusid = second_most['start'];
           timeline.moveTo(focusid);
+          console.log(focusid);
       }
 
       function moveFirst() {
           focusid = first_most['start'];
           timeline.moveTo(focusid);
+          console.log(focusid);
       }
 
       document.getElementById("thirdmost").onclick = "moveThird()";
