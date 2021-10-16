@@ -28,9 +28,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Recent Additions <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item">Page 1-a</a></li>
-            <li><a href="#" class="dropdown-item">Page 1-b</a></li>
-            <li><a href="#" class="dropdown-item">Page 1-3</a></li>
+            <li><a href="#" class="dropdown-item" id="thirdmost"></a></li>
+            <li><a href="#" class="dropdown-item" id="secondmost"></a></li>
+            <li><a href="#" class="dropdown-item" id="firstmost"></a></li>
           </ul>
         </li>
         <li><a href="/contribute"><span class="glyphicon glyphicon-user"></span> Contribute!</a></li>
@@ -72,7 +72,11 @@
       
         var maxid = items.max('id');
         var maxidvalue = maxid['id'];
-              
+        
+        document.getElementById("thirdmost").innerHTML = "New text!";
+        document.getElementById("secondmost").innerHTML = "New text!";
+        document.getElementById("firstmost").innerHTML = "New text!";              
+
         for (let i = 1; i < maxidvalue; i++) {
           var item1 = items.get(i);
           var outitem = item1['zoomLevel'];
