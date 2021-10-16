@@ -28,9 +28,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Recent Additions <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item" id="thirdmost" onclick="moveThird()"></a></li>
-            <li><a href="#" class="dropdown-item" id="secondmost" onclick="moveSecond()"></a></li>
-            <li><a href="#" class="dropdown-item" id="firstmost" onclick="moveFirst()"></a></li>
+            <li><a href="#" class="dropdown-item" id="thirdmost"></a></li>
+            <li><a href="#" class="dropdown-item" id="secondmost"></a></li>
+            <li><a href="#" class="dropdown-item" id="firstmost"></a></li>
           </ul>
         </li>
         <li><a href="/contribute"><span class="glyphicon glyphicon-user"></span> Contribute!</a></li>
@@ -94,7 +94,17 @@
         document.getElementById("secondmost").innerHTML = TextAbstract(second_most['content'], 20);
         document.getElementById("firstmost").innerHTML = TextAbstract(most_recent['content'], 20);              
 
+        document.getElementById("thirdmost").onclick = function () {
+          timeline.focus(third_most['id']);
+        };
         
+        document.getElementById("secondmost").onclick = function () {
+          timeline.focus(second_most['id']);
+        };
+
+        document.getElementById("firstmost").onclick = function () {
+          timeline.focus(most_recent['id']);
+        };
 
         for (let i = 1; i < maxidvalue; i++) {
           var item1 = items.get(i);
@@ -126,10 +136,6 @@
           timeline.moveTo(focusid);
           console.log(focusid);
       }
-
-      //document.getElementById("thirdmost").onclick = "moveThird()";
-      //document.getElementById("secondmost").onclick = "moveSecond()";
-      //document.getElementById("firstmost").onclick = "moveFirst()";
 
       // listener experiment 
        timeline.on('rangechanged', function() {
