@@ -96,14 +96,17 @@
 
         document.getElementById("thirdmost").onclick = function () {
           timeline.focus(third_most['id']);
+          timeline.setSelection(third_most['id'], true);
         };
         
         document.getElementById("secondmost").onclick = function () {
           timeline.focus(second_most['id']);
+          timeline.setSelection(second_most['id'], true);
         };
 
         document.getElementById("firstmost").onclick = function () {
           timeline.focus(most_recent['id']);
+          timeline.setSelection(most_recent['id'], true);
         };
 
         for (let i = 1; i < maxidvalue; i++) {
