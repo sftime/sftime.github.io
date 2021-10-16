@@ -72,10 +72,14 @@
       
         var maxid = items.max('id');
         var maxidvalue = maxid['id'];
-        
-        document.getElementById("thirdmost").innerHTML = "New text!";
-        document.getElementById("secondmost").innerHTML = "New text!";
-        document.getElementById("firstmost").innerHTML = "New text!";              
+
+        var most_recent = items.get(maxidvalue);
+        var second_most = items.get((maxidvalue - 1));
+        var third_most = items.get((maxidvalue - 2));
+
+        document.getElementById("thirdmost").innerHTML = third_most['content'];
+        document.getElementById("secondmost").innerHTML = second_most['content'];
+        document.getElementById("firstmost").innerHTML = most_recent['content'];              
 
         for (let i = 1; i < maxidvalue; i++) {
           var item1 = items.get(i);
