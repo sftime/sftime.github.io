@@ -48,18 +48,16 @@
     $.ajax({
       url: '/data/data.json',
       success: function(data) {
-        // hide the "loading..." message
-        //  document.getElementById('loading').style.display = 'none';
-
-        // DOM element where the Timeline will be attached
+        
+        // div for timeline to live in
         var container = document.getElementById('exvisualization');
 
-        // Create a DataSet (allows two way data-binding)
+        // create two datasets, one for initially loading the right items, one for adding/removing items based on zoomLevel
         var items = new vis.DataSet(data);
         var originalItems = new vis.DataSet(data);
         var windowHeight = Math.round($(window).height() * 0.50) + 'px';
         var windowWidth = Math.round($(window).width() * 0.99) + 'px';
-        // Configuration for the Timeline
+        // timeline option settings
         var options = {
           width: windowWidth,
           height: windowHeight,
@@ -70,14 +68,14 @@
           },
         };
       
+        // find the highest ID value in the JSON file, then retrieve the last 3 entries
         var lastEntry = items.max('id');
         var maxidvalue = lastEntry['id'];
-
         var first_most = items.get(maxidvalue);
         var second_most = items.get((maxidvalue - 1));
-        var third_most = items.get((maxidvalue - 2));
+        var third_most = items.get((maxidvalue - 2)); 
 
-        function TextAbstract(text, length) {
+        function shortenText(text, length) { // if the 'content' entry value is long, shorten it to maintain dropdown window size
           if (text == null) {
             return "";
           }
@@ -90,10 +88,12 @@
           return text + "...";
         }
 
-        document.getElementById("thirdmost").innerHTML = TextAbstract(third_most['content'], 20);
-        document.getElementById("secondmost").innerHTML = TextAbstract(second_most['content'], 20);
-        document.getElementById("firstmost").innerHTML = TextAbstract(first_most['content'], 20);              
+        // replace long titles with short ones
+        document.getElementById("thirdmost").innerHTML = shortenText(third_most['content'], 30);
+        document.getElementById("secondmost").innerHTML = shortenText(second_most['content'], 30);
+        document.getElementById("firstmost").innerHTML = shortenText(first_most['content'], 30);              
 
+        // hyperlink to the entries in the dropdown menu
         document.getElementById("thirdmost").onclick = function () {
           timeline.focus(third_most['id']);
           timeline.setSelection(third_most['id'], true);
@@ -118,8 +118,8 @@
           }
         }
 
-        // Create a Timeline
-
+      
+      // create the timeline
       var timeline = new vis.Timeline(container, items, options);
     
      function moveThird() {
