@@ -11,42 +11,48 @@
     "content": "<i>The Terminator</i> singularity",
     "start": "2045-01-01",
     "className": "test",
-    "title": "<b>test</b>"
+    "title": "<b>test</b>",
+    "zoomLevel": "2"
   },
   {
     "id": 3,
     "content": "<i>Cowboy Bebop</i> begins",
     "start": "2071-01-01",
     "className": "test",
-    "title": "<b>test</b>"
+    "title": "<b>test</b>",
+    "zoomLevel": "1"    
   },
   {
     "id": 4,
     "content": "<i>Ape and Essence</i> by Aldous Huxley",
     "start": "2108-01-01",
     "className": "test",
-    "title": "The second part of the novel takes place in the 22nd century."
+    "title": "The second part of the novel takes place in the 22nd century.",
+    "zoomLevel": "2"
   },
   {
     "id": 5,
     "content": "<i>The Children of Men</i> by P.D. James",
     "start": "2021-01-01",
     "className": "test",
-    "title": "<b>test</b>"
+    "title": "<b>test</b>",
+    "zoomLevel": "3"
   },
   {
     "id": 6,
     "content": "<i>Rendezvous with Rama</i> by Arthur C. Clarke",
     "start": "2130-01-01",
     "className": "test",
-    "title": "<b>test</b>"
+    "title": "<b>test</b>",
+    "zoomLevel": "2"
   },
   {
     "id": 7,
     "content": "<i>Do Androids Dream of Electric Sheep?</i> by Philip K. Dick",
     "start": "2021-01-01",
     "className": "test",
-    "title": "Set in 1992 in early editions, but 2021 in later ones."
+    "title": "Set in 1992 in early editions, but 2021 in later ones.",
+    "zoomLevel": "3"
   }
 
 ]
