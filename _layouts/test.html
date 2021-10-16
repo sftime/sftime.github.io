@@ -95,11 +95,11 @@
             var years = interval / 31536000000;
             
             for (let j = 1; j < maxidvalue; j++) {
-              var item2 = originalItems.get(j);
-              var itemzoom = item2['zoomLevel']
-              if (years < 96 && itemzoom == 3) {
+              var itemToTest = originalItems.get(j);
+              var itemzoom = itemtoTest['zoomLevel']
+              if (years < 96 && itemzoom == 3) { 
                 //var idtoadd = item2['id'];
-                items.add(item2);
+                items.add(itemtoTest);
               }
             }
 
