@@ -70,10 +70,10 @@
           },
         };
       
-        var maxid = items.max('id');
-        var maxidvalue = maxid['id'];
+        var lastEntry = items.max('id');
+        var maxidvalue = lastEntry['id'];
 
-        var most_recent = items.get(maxidvalue);
+        var first_most = items.get(maxidvalue);
         var second_most = items.get((maxidvalue - 1));
         var third_most = items.get((maxidvalue - 2));
 
@@ -92,7 +92,7 @@
 
         document.getElementById("thirdmost").innerHTML = TextAbstract(third_most['content'], 20);
         document.getElementById("secondmost").innerHTML = TextAbstract(second_most['content'], 20);
-        document.getElementById("firstmost").innerHTML = TextAbstract(most_recent['content'], 20);              
+        document.getElementById("firstmost").innerHTML = TextAbstract(first_most['content'], 20);              
 
         document.getElementById("thirdmost").onclick = function () {
           timeline.focus(third_most['id']);
@@ -105,16 +105,16 @@
         };
 
         document.getElementById("firstmost").onclick = function () {
-          timeline.focus(most_recent['id']);
-          timeline.setSelection(most_recent['id'], true);
+          timeline.focus(first_most['id']);
+          timeline.setSelection(first_most['id'], true);
         };
 
         for (let i = 1; i < maxidvalue; i++) {
-          var item1 = items.get(i);
-          var outitem = item1['zoomLevel'];
-          if (outitem == 2) { 
-            idrem = item1['id'];
-            items.remove(idrem);
+          var itemToCheck = items.get(i);
+          var itemCheckZoom = itemToCheck['zoomLevel'];
+          if (itemCheckZoom == 2) { 
+            idToRemove = itemToCheck['id'];
+            items.remove(idToRemove);
           }
         }
 
