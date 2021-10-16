@@ -91,7 +91,16 @@
             var end_stamp = range.end.valueOf();
             var interval = end_stamp - start_stamp;
             var years = interval / 31536000000;
-                      
+            
+            for (let j = 1; j < maxidvalue; j++) {
+              var item_test = items.get(j);
+              var itemzoom = item_test['zoomLevel']
+              if (years < 96 && itemzoom == 3) {
+                var idtoadd = item_test['id'];
+                items.add(idtoadd);
+              }
+            }
+
             console.log(years);
           }
         );
