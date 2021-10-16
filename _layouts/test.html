@@ -68,7 +68,18 @@
             followMouse: true,
           },
         };
-
+        
+        var maxid = items.max('id');
+        var maxidvalue = maxid['id'];
+        var item1 = items.get(1);
+        var outitem = item1['zoomLevel'];
+            
+        for (let i = 0; i < maxidvalue; i++) {
+          if (outitem == 3) { 
+            idrem = item1['id'];
+            items.remove(idrem);
+          }
+        }
         // Create a Timeline
         var timeline = new vis.Timeline(container, items, options);
     
@@ -79,19 +90,8 @@
             var end_stamp = range.end.valueOf();
             var interval = end_stamp - start_stamp;
             var years = interval / 31536000000;
-            //console.log(years);
-            var item1 = items.get(1);
-            var outitem = item1['zoomLevel'];
-            
-            var maxid = items.max('id');
-            var maxidvalue = maxid['id'];
-            for (let i = 0; i < maxidvalue; i++) {
-              if (outitem == 3) { 
-                idrem = item1['id'];
-                items.remove(idrem);
-              }
-            }
-            console.log(maxidvalue);
+                      
+            console.log(years);
           }
         );
         $(window).on('resize', function(){
