@@ -55,6 +55,7 @@
         var container = document.getElementById('exvisualization');
 
         // Create a DataSet (allows two way data-binding)
+        var originalItems = new vis.DataSet(data);
         var items = new vis.DataSet(data);
         var windowHeight = Math.round($(window).height() * 0.50) + 'px';
         var windowWidth = Math.round($(window).width() * 0.99) + 'px';
@@ -68,11 +69,10 @@
             followMouse: true,
           },
         };
-        
+      
         var maxid = items.max('id');
         var maxidvalue = maxid['id'];
-        
-            
+              
         for (let i = 1; i < maxidvalue; i++) {
           var item1 = items.get(i);
           var outitem = item1['zoomLevel'];
@@ -81,11 +81,10 @@
             items.remove(idrem);
           }
         }
+
         // Create a Timeline
 
-        items.order('id');
-
-        var timeline = new vis.Timeline(container, items, options);
+      var timeline = new vis.Timeline(container, items, options);
     
       // listener experiment 
        timeline.on('rangechanged', function() {
@@ -96,7 +95,7 @@
             var years = interval / 31536000000;
             
             for (let j = 1; j < maxidvalue; j++) {
-              var item_test = items.get(j);
+              var item_test = originalItems.get(j);
               var itemzoom = item_test['zoomLevel']
               if (years < 96 && itemzoom == 3) {
                 var idtoadd = item_test['id'];
