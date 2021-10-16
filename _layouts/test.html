@@ -110,24 +110,24 @@
       var timeline = new vis.Timeline(container, items, options);
     
      function moveThird() {
-          focusid = third_most['id'];
-          timeline.focus(focusid);
+          focusid = third_most['start'];
+          timeline.moveTo(focusid);
         }
 
       function moveSecond() {
-          focusid = second_most['id'];
-          timeline.focus(focusid);
+          focusid = second_most['start'];
+          timeline.moveTo(focusid);
       }
 
       function moveFirst() {
-          focusid = first_most['id'];
-          timeline.focus(focusid);
+          focusid = first_most['start'];
+          timeline.moveTo(focusid);
       }
 
       document.getElementById("thirdmost").onclick = "moveThird()";
       document.getElementById("secondmost").onclick = "moveSecond()";
       document.getElementById("firstmost").onclick = "moveFirst()";
-      
+
       // listener experiment 
        timeline.on('rangechanged', function() {
             var range = timeline.getWindow();
