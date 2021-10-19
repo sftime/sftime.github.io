@@ -86,7 +86,7 @@
               tooltip: {
                 followMouse: true,
               },
-              timeAxis: {scale: 'year', step: 20}
+           //   timeAxis: {scale: 'year', step: 20}
 
             };
 
@@ -186,14 +186,14 @@
                   items.add(itemToTest); // add zoom level 2 items if the scale is short enough
                 } else if (years > 120 && itemzoom == 2) {
                   items.remove(itemToTest); // remove zoom level 2 items if scale is too long
-              //  } else if (years > 100 && itemzoom == 3 && items.get(j) == null) {
-             //     items.add(itemToTest); // add zoom level 3
-             //   } else if (years > 100 && itemzoom == 3) {
-             //     items.remove(itemToTest); // remove zoom level 3
-             //   } else if (years > 80 && itemzoom == 4 && items.get(j) == null) {
-             //     items.add(itemToTest); // add zoom level 4
-             //   } else if (years > 80 && itemzoom == 4) {
-             //     items.remove(itemToTest); // remove zoom level 4
+                } else if (years > 100 && itemzoom == 3 && items.get(j) == null) {
+                 items.add(itemToTest); // add zoom level 3
+                } else if (years > 100 && itemzoom == 3) {
+                  items.remove(itemToTest); // remove zoom level 3
+                } else if (years > 80 && itemzoom == 4 && items.get(j) == null) {
+                  items.add(itemToTest); // add zoom level 4
+                } else if (years > 80 && itemzoom == 4) {
+                  items.remove(itemToTest); // remove zoom level 4
                 }
               }
               console.log(years);
