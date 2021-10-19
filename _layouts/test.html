@@ -1,195 +1,222 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>{{ page.title }}</title>
+    <script src="/static/js/jquery-3.5.1.js"></script>
+    <script
+      type="text/javascript"
+      src="static/js/vis-timeline-graph2d.min.js"
+    ></script>
+    <link rel="shortcut icon" type="image/png" href="/static/img/favicon.png" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!--<script src="https://kit.fontawesome.com/ae9515790e.js" crossorigin="anonymous"></script>-->
+    <script src="/static/js/fontawesome.js"></script>
+  </head>
 
-<head>
-  <title>{{ page.title }}</title>
-  <script src="/static/js/jquery-3.5.1.js"></script>
-  <script type="text/javascript" src="static/js/vis-timeline-graph2d.min.js"></script>
-  <link rel="shortcut icon" type="image/png" href="/static/img/favicon.png">
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
-  <script src="/static/js/popper.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
-  <!--<script src="https://kit.fontawesome.com/ae9515790e.js" crossorigin="anonymous"></script>-->
-  <script src="/static/js/fontawesome.js"></script>
-</head>
+  <body>
+    <nav class="navbar navbar-expand-md sticky-top">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+              >Recent Additions <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item" id="thirdmost"></a></li>
+              <li><a href="#" class="dropdown-item" id="secondmost"></a></li>
+              <li><a href="#" class="dropdown-item" id="firstmost"></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/contribute"
+              ><span class="glyphicon glyphicon-user"></span> Contribute!</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="glyphicon glyphicon-log-in"></span> About</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      {{ content }}
 
-<body>
-  <nav class="navbar navbar-expand-md sticky-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Recent Additions <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item" id="thirdmost"></a></li>
-            <li><a href="#" class="dropdown-item" id="secondmost"></a></li>
-            <li><a href="#" class="dropdown-item" id="firstmost"></a></li>
-          </ul>
-        </li>
-        <li><a href="/contribute"><span class="glyphicon glyphicon-user"></span> Contribute!</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> About</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="container-fluid">
+      <script type="text/javascript">
+        // load data via an ajax request. When the data is in, load the timeline
+        $.ajax({
+          url: "/data/data.json",
+          success: function (data) {
+            // div for timeline to live in
+            var container = document.getElementById("exvisualization");
 
-    {{ content }}
+            // create two datasets, one for initially loading the right items, one for adding/removing items based on zoomLevel
+            var items = new vis.DataSet(data);
+            var originalItems = new vis.DataSet(data);
+            var windowHeight = Math.round($(window).height() * 0.5) + "px";
+            var windowWidth = Math.round($(window).width() * 0.99) + "px";
+            // timeline option settings
+            var options = {
+              width: windowWidth,
+              height: windowHeight,
+              showMajorLabels: false,
+              zoomMin: 473353890000, // 15 years in ms
+              tooltip: {
+                followMouse: true,
+              },
+            };
 
-    <!--<p id="demo"></p>-->
-  <script type="text/javascript">
-    // load data via an ajax request. When the data is in, load the timeline
-    $.ajax({
-      url: '/data/data.json',
-      success: function(data) {
-        
-        // div for timeline to live in
-        var container = document.getElementById('exvisualization');
+            // find the highest ID value in the JSON file, then retrieve the last 3 entries
+            var lastEntry = items.max("id");
+            var maxidvalue = lastEntry["id"];
+            var first_most = items.get(maxidvalue);
+            var second_most = items.get(maxidvalue - 1);
+            var third_most = items.get(maxidvalue - 2);
 
-        // create two datasets, one for initially loading the right items, one for adding/removing items based on zoomLevel
-        var items = new vis.DataSet(data);
-        var originalItems = new vis.DataSet(data);
-        var windowHeight = Math.round($(window).height() * 0.50) + 'px';
-        var windowWidth = Math.round($(window).width() * 0.99) + 'px';
-        // timeline option settings
-        var options = {
-          width: windowWidth,
-          height: windowHeight,
-          showMajorLabels: false,
-          zoomMin: 473353890000, // 15 years in ms
-          tooltip: {
-            followMouse: true,
-          },
-        };
-      
-        // find the highest ID value in the JSON file, then retrieve the last 3 entries
-        var lastEntry = items.max('id');
-        var maxidvalue = lastEntry['id'];
-        var first_most = items.get(maxidvalue);
-        var second_most = items.get((maxidvalue - 1));
-        var third_most = items.get((maxidvalue - 2)); 
+            function shortenText(text, length) {
+              // if the 'content' entry value is long, shorten it to maintain dropdown window size
+              if (text == null) {
+                return "";
+              }
+              if (text.length <= length) {
+                return text;
+              }
+              text = text.substring(0, length);
+              last = text.lastIndexOf(" ");
+              text = text.substring(0, last);
+              return text + "...";
+            }
 
-        function shortenText(text, length) { // if the 'content' entry value is long, shorten it to maintain dropdown window size
-          if (text == null) {
-            return "";
-          }
-          if (text.length <= length) {
-            return text;
-          }
-          text = text.substring(0, length);
-          last = text.lastIndexOf(" ");
-          text = text.substring(0, last);
-          return text + "...";
-        }
+            // replace long titles with short ones
+            document.getElementById("thirdmost").innerHTML = shortenText(
+              third_most["content"],
+              30
+            );
+            document.getElementById("secondmost").innerHTML = shortenText(
+              second_most["content"],
+              30
+            );
+            document.getElementById("firstmost").innerHTML = shortenText(
+              first_most["content"],
+              30
+            );
 
-        // replace long titles with short ones
-        document.getElementById("thirdmost").innerHTML = shortenText(third_most['content'], 30);
-        document.getElementById("secondmost").innerHTML = shortenText(second_most['content'], 30);
-        document.getElementById("firstmost").innerHTML = shortenText(first_most['content'], 30);              
+            // hyperlink to the entries in the dropdown menu
+            document.getElementById("thirdmost").onclick = function () {
+              timeline.focus(third_most["id"]);
+              timeline.setSelection(third_most["id"], true);
+            };
 
-        // hyperlink to the entries in the dropdown menu
-        document.getElementById("thirdmost").onclick = function () {
-          timeline.focus(third_most['id']);
-          timeline.setSelection(third_most['id'], true);
-        };
-        
-        document.getElementById("secondmost").onclick = function () {
-          timeline.focus(second_most['id']);
-          timeline.setSelection(second_most['id'], true);
-        };
+            document.getElementById("secondmost").onclick = function () {
+              timeline.focus(second_most["id"]);
+              timeline.setSelection(second_most["id"], true);
+            };
 
-        document.getElementById("firstmost").onclick = function () {
-          timeline.focus(first_most['id']);
-          timeline.setSelection(first_most['id'], true);
-        };
+            document.getElementById("firstmost").onclick = function () {
+              timeline.focus(first_most["id"]);
+              timeline.setSelection(first_most["id"], true);
+            };
 
-        for (let i = 1; i < maxidvalue; i++) {
-          var itemToCheck = items.get(i);
-          var itemCheckZoom = itemToCheck['zoomLevel'];
-          if (itemCheckZoom == 2) { 
-            idToRemove = itemToCheck['id'];
-            items.remove(idToRemove);
-          }
-        }
-
-      
-      // create the timeline
-      var timeline = new vis.Timeline(container, items, options);
-    
-     function moveThird() {
-          focusid = third_most['start'];
-          timeline.moveTo(focusid);
-          console.log(focusid);
-        }
-
-      function moveSecond() {
-          focusid = second_most['start'];
-          timeline.moveTo(focusid);
-          console.log(focusid);
-      }
-
-      function moveFirst() {
-          focusid = first_most['start'];
-          timeline.moveTo(focusid);
-          console.log(focusid);
-      }
-
-      // listener experiment 
-       timeline.on('rangechanged', function() {
-            var range = timeline.getWindow();
-            var start_stamp = range.start.valueOf();
-            var end_stamp = range.end.valueOf();
-            var interval = end_stamp - start_stamp;
-            var years = interval / 31536000000;
-            
-            for (let j = 1; j < maxidvalue; j++) {
-              var itemToTest = originalItems.get(j);
-              var itemzoom = itemToTest['zoomLevel'];
-              if (years < 96 && itemzoom == 2 && items.get(j) == null) { 
-                //var idtoadd = item2['id'];
-                items.add(itemToTest);
-              } else if (years > 96 && itemzoom == 2) { 
-                //var idtoadd = item2['id'];
-                items.remove(itemToTest);
+            for (let i = 1; i < maxidvalue; i++) {
+              var itemToCheck = items.get(i);
+              var itemCheckZoom = itemToCheck["zoomLevel"];
+              if (itemCheckZoom == 2) {
+                idToRemove = itemToCheck["id"];
+                items.remove(idToRemove);
               }
             }
-          
-            console.log(years);
-          }
-        );
-        $(window).on('resize', function(){
-            timeline.setOptions({                
-                width: (Math.round($(window).width() * 0.99)) + 'px',
-                height: (Math.round($(window).height() * 0.50)) + "px",
+
+            // create the timeline
+            var timeline = new vis.Timeline(container, items, options);
+
+            function moveThird() {
+              focusid = third_most["start"];
+              timeline.moveTo(focusid);
+              console.log(focusid);
+            }
+
+            function moveSecond() {
+              focusid = second_most["start"];
+              timeline.moveTo(focusid);
+              console.log(focusid);
+            }
+
+            function moveFirst() {
+              focusid = first_most["start"];
+              timeline.moveTo(focusid);
+              console.log(focusid);
+            }
+
+            // listener experiment
+            timeline.on("rangechanged", function () {
+              var range = timeline.getWindow();
+              var start_stamp = range.start.valueOf();
+              var end_stamp = range.end.valueOf();
+              var interval = end_stamp - start_stamp;
+              var years = interval / 31536000000;
+
+              for (let j = 1; j < maxidvalue; j++) {
+                var itemToTest = originalItems.get(j);
+                var itemzoom = itemToTest["zoomLevel"];
+                if (years < 96 && itemzoom == 2 && items.get(j) == null) {
+                  //var idtoadd = item2['id'];
+                  items.add(itemToTest);
+                } else if (years > 96 && itemzoom == 2) {
+                  //var idtoadd = item2['id'];
+                  items.remove(itemToTest);
+                }
+              }
+
+              console.log(years);
             });
-          });
-      
-      },
-      error: function(err) {
-        console.log('Error', err);
-        if (err.status === 0) {
-          alert('Failed to load data.\nPlease run this example on a server.');
-        } else {
-          alert('Failed to load data.');
-        }
-      }
-
-    });
-
-  </script>
-
-  </div>
-  <br>
-  <footer>
-    <a href="#"><i class="fa fa-envelope fa-1" aria-hidden="true"></i></a>
-    <a href="https://github.com/sftime/sftime.github.io"><i class="fa fa-github fa-1" aria-hidden="true"></i></a>
-  </footer>
-</body>
-
+            $(window).on("resize", function () {
+              timeline.setOptions({
+                width: Math.round($(window).width() * 0.99) + "px",
+                height: Math.round($(window).height() * 0.5) + "px",
+              });
+            });
+          },
+          error: function (err) {
+            console.log("Error", err);
+            if (err.status === 0) {
+              alert(
+                "Failed to load data.\nPlease run this example on a server."
+              );
+            } else {
+              alert("Failed to load data.");
+            }
+          },
+        });
+      </script>
+    </div>
+    <br />
+    <footer>
+      <a href="#"><i class="fa fa-envelope fa-1" aria-hidden="true"></i></a>
+      <a href="https://github.com/sftime/sftime.github.io"
+        ><i class="fa fa-github fa-1" aria-hidden="true"></i
+      ></a>
+    </footer>
+  </body>
 </html>
