@@ -142,7 +142,7 @@
             for (let i = 1; i < maxidvalue; i++) {
               var itemToCheck = items.get(i);
               var itemCheckZoom = itemToCheck["zoomLevel"];
-              if (itemCheckZoom == 2) {
+              if (itemCheckZoom != 1) {
                 idToRemove = itemToCheck["id"];
                 items.remove(idToRemove);
               }
@@ -180,13 +180,18 @@
               for (let j = 1; j < maxidvalue; j++) {
                 var itemToTest = originalItems.get(j);
                 var itemzoom = itemToTest["zoomLevel"];
-                if (years < 96 && itemzoom == 2 && items.get(j) == null) {
-                  //var idtoadd = item2['id'];
-                  items.add(itemToTest);
-                } else if (years > 96 && itemzoom == 2) {
-                  //var idtoadd = item2['id'];
-                  items.remove(itemToTest);
-                }
+                if (years < 120 && itemzoom == 2 && items.get(j) == null) {
+                  items.add(itemToTest); // add zoom level 2 items if the scale is short enough
+                } else if (years > 120 && itemzoom == 2) {
+                  items.remove(itemToTest); // remove zoom level 2 items if scale is too long
+                } else if (years > 100 && itemzoom == 3) {
+                  items.add(itemToTest); // add zoom level 3
+                } else if (years > 100 && itemzoom == 3) {
+                  items.remove(itemToTest); // remove zoom level 3
+                } else if (years > 80 && itemzoom == 4) {
+                  items.add(itemToTest); // add zoom level 4
+                } else if (years > 80 && itemzoom == 4) {
+                  items.remove(itemToTest); // remove zoom level 4
               }
 
               console.log(years);
