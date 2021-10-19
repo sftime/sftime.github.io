@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>{{ page.title }}</title>
     <script src="/static/js/jquery-3.5.1.js"></script>
-    <script
-      type="text/javascript"
-      src="static/js/vis-timeline-graph2d.min.js"
-    ></script>
+    <script src="static/js/vis-timeline-graph2d.min.js"></script>
     <link rel="shortcut icon" type="image/png" href="/static/img/favicon.png" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
@@ -64,7 +61,7 @@
     <div class="container-fluid">
       {{ content }}
 
-      <script type="text/javascript">
+      <script>
         // load data via an ajax request. When the data is in, load the timeline
         $.ajax({
           url: "/data/data.json",
