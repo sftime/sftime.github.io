@@ -142,7 +142,7 @@
             for (let i = 1; i < maxidvalue; i++) {
               var itemToCheck = items.get(i);
               var itemCheckZoom = itemToCheck["zoomLevel"];
-              if (itemCheckZoom != 1) {
+              if (itemCheckZoom > 1) {
                 idToRemove = itemToCheck["id"];
                 items.remove(idToRemove);
               }
