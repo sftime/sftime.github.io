@@ -28,7 +28,7 @@
     "start": "2108-01-01",
     "className": "test",
     "title": "The second part of the novel takes place in the 22nd century.",
-    "zoomLevel": "2"
+    "zoomLevel": "1"
   },
   {
     "id": 5,
@@ -44,7 +44,7 @@
     "start": "2130-01-01",
     "className": "test",
     "title": "<b>test</b>",
-    "zoomLevel": "3"
+    "zoomLevel": "4"
   },
   {
     "id": 7,
