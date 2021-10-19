@@ -87,9 +87,7 @@
                 followMouse: true,
               },
               start: new Date(2000, 01, 01),
-              end: new Date(2120, 10, 01)
-           //   timeAxis: {scale: 'year', step: 20}
-
+              end: new Date(2120, 10, 01),              
             };
 
             // find the highest ID value in the JSON file, then retrieve the last 3 entries
@@ -181,6 +179,12 @@
               var interval = end_stamp - start_stamp;
               var years = interval / 31536000000;
 
+              // 4k resolution: 122.66 starting / 20.4 year steps
+              // 1080p resolution: 140.10 starting / 24.3 year steps
+              // 2560x1600: 130.81 starting / 21.8 year steps
+              // pixel: 134 starting / 22.7 year steps
+              // iphone: 131 starting / 21.8 year steps
+
               for (let j = 1; j < maxidvalue; j++) {
                 var itemToTest = originalItems.get(j);
                 var itemzoom = itemToTest["zoomLevel"];
@@ -189,7 +193,7 @@
                 } else if (years > 120 && itemzoom == 2) {
                   items.remove(itemToTest); // remove zoom level 2 items if scale is too long
                 } else if (years < 100 && itemzoom == 3 && items.get(j) == null) {
-                 items.add(itemToTest); // add zoom level 3
+                  items.add(itemToTest); // add zoom level 3
                 } else if (years > 100 && itemzoom == 3) {
                   items.remove(itemToTest); // remove zoom level 3
                 } else if (years < 80 && itemzoom == 4 && items.get(j) == null) {
