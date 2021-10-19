@@ -36,7 +36,7 @@
     "start": "2021-01-01",
     "className": "test",
     "title": "<b>test</b>",
-    "zoomLevel": "3"
+    "zoomLevel": "4"
   },
   {
     "id": 6,
@@ -52,7 +52,7 @@
     "start": "2021-01-01",
     "className": "test",
     "title": "Set in 1992 in early editions, but 2021 in later ones.",
-    "zoomLevel": "3"
+    "zoomLevel": "1"
   }
 
 ]
