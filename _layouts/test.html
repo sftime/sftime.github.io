@@ -109,18 +109,9 @@
             }
 
             // replace long titles with short ones
-            document.getElementById("thirdmost").innerHTML = shortenText(
-              third_most["content"],
-              30
-            );
-            document.getElementById("secondmost").innerHTML = shortenText(
-              second_most["content"],
-              30
-            );
-            document.getElementById("firstmost").innerHTML = shortenText(
-              first_most["content"],
-              30
-            );
+            document.getElementById("thirdmost").innerHTML = shortenText(third_most["content"], 30);
+            document.getElementById("secondmost").innerHTML = shortenText(second_most["content"], 30);
+            document.getElementById("firstmost").innerHTML = shortenText(first_most["content"], 30);
 
             // hyperlink to the entries in the dropdown menu
             document.getElementById("thirdmost").onclick = function () {
@@ -213,8 +204,7 @@
             console.log("Error", err);
             if (err.status === 0) {
               alert("Failed to load timeline data.\nPlease run this example on a server.");
-            } else {
-              alert("Failed to load timeline data.");
+            } else {              alert("Failed to load timeline data.");
             }
           },
         });
