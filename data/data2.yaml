@@ -10,7 +10,7 @@
     content: '<i>The Terminator</i> singularity'
     start: '2045-01-01'
     className: test
-    title: '<i>That's pretty much the time we can kiss our asses goodbye... unless we stop it.</i>'
+    title: '<i>That''s pretty much the time we can kiss our asses goodbye... unless we stop it.</i>'
     zoomLevel: '2'
 - 
     id: 3
@@ -21,7 +21,7 @@
     zoomLevel: '1'
 - 
     id: 4
-    content: '<i>The Hitchhiker's Guide to the Galaxy</i> published'
+    content: '<i>The Hitchhiker''s Guide to the Galaxy</i> published'
     start: '1979-10-12'
     className: test
     title: 'Originally published on this date, meant to be set in the present'
