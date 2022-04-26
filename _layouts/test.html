@@ -73,7 +73,7 @@
             var items = new vis.DataSet(data);
             var originalItems = new vis.DataSet(data);
             var windowHeight = Math.round($(window).height() * 0.5) + "px";
-            var windowWidth = Math.round($(window).width() * 0.99) + "px";
+            var windowWidth = Math.round($(window).width() * 0.95) + "px";
             // timeline option settings
             var options = {
               width: windowWidth,
@@ -195,7 +195,7 @@
             });
             $(window).on("resize", function () {
               timeline.setOptions({
-                width: Math.round($(window).width() * 0.99) + "px",
+                width: Math.round($(window).width() * 0.95) + "px",
                 height: Math.round($(window).height() * 0.5) + "px",
               });
             });

@@ -1,0 +1,89 @@
+- 
+    id: 1
+    content: '<i>Total Recall</i>'
+    start: '2084-01-01'
+    className: test
+    title: 'Described by Philip K. Dick as the not too distant future, but set definitively as 2084 in the Verhoeven adaptation'
+    zoomLevel: '3'
+- 
+    id: 2
+    content: '<i>The Terminator</i> singularity'
+    start: '2045-01-01'
+    className: test
+    title: '<i>That's pretty much the time we can kiss our asses goodbye... unless we stop it.</i>'
+    zoomLevel: '2'
+- 
+    id: 3
+    content: '<i>Cowboy Bebop</i> begins'
+    start: '2071-01-01'
+    className: test
+    title: '<b>test</b>'
+    zoomLevel: '1'
+- 
+    id: 4
+    content: '<i>The Hitchhiker's Guide to the Galaxy</i> published'
+    start: '1979-10-12'
+    className: test
+    title: 'Originally published on this date, meant to be set in the present'
+    zoomLevel: '3'
+- 
+    id: 5
+    content: '"Frankenstein Unbound"'
+    start: '2020-08-01'
+    className: test
+    title: 'The story starts here, before Joe Bodenland is transported back to meet Viktor Frankenstein'
+    zoomLevel: '3'
+- 
+    id: 6
+    content: 'Galactic Emperor Frankenn I is coronated'
+    start: '11584-01-01'
+    className: test
+    title: 'This marks the beginning of the Galactic Era calendar, but the math gets tricky from here once we leave AD...'
+    zoomLevel: '4'
+- 
+    id: 7
+    content: 'Parts of <i>The Drowned World</i> occur'
+    start: '2145-01-01'
+    className: test
+    title: 'Listed as occuring in the late 21st century, this is a definitive date from the start of the novel'
+    zoomLevel: '3'
+- 
+    id: 8
+    content: '<i>Across the Sea of Suns</i>, Gregory Benford'
+    start: '2056-01-01'
+    className: test
+    title: 'Nigel Walmsley investigates an interstellar communication in English'
+    zoomLevel: '4'
+- 
+    id: 9
+    content: '<i>Timescape</i>, Gregory Benford'
+    start: '1998-01-01'
+    className: test
+    title: 'Set in both 1998 and 1963, in 1998 the Earth is dying due to environmental damage to the oceans, as characters from 1998 attempt to communicate with those from 1963'
+    zoomLevel: '3'
+- 
+    id: 10 
+    content: '<i>If the Stars Are Gods</i>, Gregory Benford'
+    start: '2017-01-01'
+    className: test
+    title: 'After traveling to Mars in 1992, our protagonist mind-melds with aliens on the moon'
+    zoomLevel: '4'
+- 
+    id: 11
+    content: '<i>The Demolished Man</i>, Alfred Bester'
+    start: '2300-01-01'
+    className: test
+    title: 'Only indicated as the 24th century, telepaths called espers have eliminated crime'
+    zoomLevel: '4'
+- 
+    id: 12
+    content: '<i>All the Colors of Darkness</i>, Lloyd Biggle Jr.'
+    start: '1980-01-01'
+    className: test
+    title: 'The beginning of the Jan Darzek novels, when the Universal Transmitter Company has made instant matter transmission possible'
+    zoomLevel: '4'
+
+
+
+
+
